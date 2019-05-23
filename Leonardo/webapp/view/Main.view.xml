@@ -1,0 +1,68 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:iot="sap.ui.iot.controls"
+	xmlns:iotele="sap.ui.iot.elements" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	controllerName="Leonardo.controller.Main" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" backgroundDesign="Solid" showFooter="false">
+				<content>
+					<HBox width="100%" id="hbox2">
+						<items>
+							<iot:IoTThingList xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+								things="{path:'/Things'}" id="list3" controlType="List"
+								cd:w5g.dt.context="/Things">
+								<iot:columns>
+									<iotele:IoTThingListColumnHeader text="Thing Id" id="header3"/>
+									<iotele:IoTThingListColumnHeader text="Thing Name" id="header4"/>
+									<iotele:IoTThingListColumnHeader text="Thing Type" id="header5"/></iot:columns>
+								<iot:things>
+									<iotele:IoTThingListElement thingImage="{ThingId}" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}"
+										mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}"
+										lowSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low}" id="element1" itemPress="action"
+										action:wiring="\{'itemPress':\{'targets':[\{'id':'tgauge0','action':'doReload','parameters':\{'context':'thing'\}\},\{'id':'values0','action':'doReload','parameters':\{'context':'thing'\}\}]\}\}">
+										<iotele:cells>
+											<iotele:IoTThingListColumn text="{ThingId}" id="column3"/>
+											<iotele:IoTThingListColumn text="{ThingName}" id="column4"/>
+											<iotele:IoTThingListColumn text="{ThingType}" id="column5"/></iotele:cells>
+									</iotele:IoTThingListElement>
+								</iot:things>
+							</iot:IoTThingList>
+							<iot:IoTMeasuredValues id="values0" selectColumns="Last Measured">
+								<iot:measuredValues>
+									<iotele:IoTMeasuredValuesListElement id="element1_1556087951277" itemPress="action"
+										action:wiring="\{'itemPress':\{'targets':[\{'id':'tchart1','action':'doReload','parameters':\{'context':'thing'\}\},\{'id':'tchart1','action':'addEventOnChart','parameters':\{'context':'thing'\}\},\{'id':'tchart1','action':'reloadEventOnChart','parameters':\{'context':'thing'\}\}]\}\}"/>
+								</iot:measuredValues>
+							</iot:IoTMeasuredValues>
+						</items>
+					</HBox>
+					<VBox width="100%" direction="Column" id="vbox2">
+						<items>
+							<FlexBox xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:iot="sap.ui.iot.controls"
+								xmlns:iotele="sap.ui.iot.elements" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m"
+								width="100%" id="box0_1556077791242">
+								<items>
+									<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" id="box1">
+										<items>
+											<core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text~" id="item1"/>
+											<core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text@" id="item2"/>
+										</items>
+										<!--<core:Item key="{ProductId}" text="{Name}"/>-->
+									</MultiComboBox>
+									<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Button" id="button2"
+										press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'selected_data_info'\}\}\}"/>
+									<ComboBox xmlns="sap.m" id="box12">
+										<items>
+											<core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item4"/>
+											<core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item5"/>
+										</items>
+									</ComboBox>
+									<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Reload" id="button3"
+										action:wiring="\{'press':\{'navigation':\{'routeName':'_view'\}\}\}" press="action"/>
+								</items>
+							</FlexBox>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

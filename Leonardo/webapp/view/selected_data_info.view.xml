@@ -1,0 +1,67 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="Leonardo.controller.selected_data_info">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<IconTabBar id="bar0">
+						<items>
+							<IconTabFilter text="Item List" id="filter0" icon="sap-icon://arrow-down">
+								<content>
+									<HBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="hbox33" height="100%">
+										<items>
+											<HBox xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" width="50%" id="hbox20" busyIndicatorSize="Auto" height="100%">
+												<items>
+													<sap.ui.iot.controls:IoTThingList xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" xmlns:sap.ui.iot.controls="sap.ui.iot.controls" xmlns:sap.ui.iot.elements="sap.ui.iot.elements" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" things="{path:'/Things',parameters:{expand:'DYN_ENT_pdms_eu10_com_sap_asset_core__Image'}}" id="list1" initialSortColumn="ThingName" cd:w5g.dt.context="/Things" fieldGroupIds="" controlType="List" busyIndicatorSize="Auto" thingImageVisible="false" height="95%">
+														<sap.ui.iot.controls:columns>
+															<sap.ui.iot.elements:IoTThingListColumnHeader text="Thing Name" id="header4"/>
+															<sap.ui.iot.elements:IoTThingListColumnHeader text="Thing Description" id="header5"/>
+														</sap.ui.iot.controls:columns>
+														<sap.ui.iot.controls:things>
+															<!--iot 1번 섹션, 항목 클릭 후 다음 섹션으로 이동-->
+															<sap.ui.iot.elements:IoTThingListElement xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}" mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}" lowSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Low}" id="element1_copy_list1_0_list1_0_list1_0_copy_list1_0_list1_0_list1_0_copy_list1_0" thingImage="{DYN_ENT_pdms_eu10_com_sap_asset_core__Image/Image.ImageName}" itemPress="action" action:wiring="\{'itemPress':\{'targets':[\{'id':'values0','action':'doReload','parameters':\{'context':'thing'\}\},\{'id':'marker0','action':'doReload','parameters':\{'context':'thing'\}\},\{'id':'tchart2','action':'doReload','parameters':\{'context':'thing'\}\},\{'id':'tchart2','action':'addEventOnChart','parameters':\{'context':'thing'\}\}]\}\}">
+																<sap.ui.iot.elements:cells>
+																	<sap.ui.iot.elements:IoTThingListColumn text="{ThingName}" id="column49_copy_list1_0_list1_0_list1_0_copy_list1_0_list1_0_list1_0_copy_list1_0"/>
+																	<sap.ui.iot.elements:IoTThingListColumn text="{ThingDescription}" id="column50_copy_list1_0_list1_0_list1_0_copy_list1_0_list1_0_list1_0_copy_list1_0"/>
+																</sap.ui.iot.elements:cells>
+															</sap.ui.iot.elements:IoTThingListElement>
+														</sap.ui.iot.controls:things>
+													</sap.ui.iot.controls:IoTThingList>
+												</items>
+											</HBox>
+											<sap.ui.iot.controls:IoTImageMarker xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" xmlns:sap.ui.iot.controls="sap.ui.iot.controls" id="marker0" thingImageSrc="./view/src/drawable/bg.jpg" height="" width="">
+												<sap.ui.iot.controls:markers>
+													<sap.ui.iot.controls:IoTThingMarker id="marker1" xpos="100" ypos="100" press="press"/>
+													<sap.ui.iot.controls:IoTThingMarker id="marker2" xpos="100" ypos="300" press="press"/>
+													<sap.ui.iot.controls:IoTThingMarker id="marker3" xpos="300" ypos="100" press="press"/>
+													<sap.ui.iot.controls:IoTThingMarker xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="marker4" xpos="300" ypos="300" cd:w5g.dt.context="/Things"/>
+												</sap.ui.iot.controls:markers>
+											</sap.ui.iot.controls:IoTImageMarker>
+										</items>
+									</HBox>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Measure" icon="sap-icon://activity-items" iconColor="Critical" id="filter1">
+								<content>
+									<sap.ui.iot.controls:IoTMeasuredValues xmlns:sap.ui.iot.controls="sap.ui.iot.controls" xmlns:sap.ui.iot.elements="sap.ui.iot.elements" id="values0" measuredValuesListMode="MultiSelect" selectColumns="Last Measured" toolbarOptionalButtonText="get count" buttonSelect="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'buttonSelect':\{'targets':[\{'id':'tchart2','action':'doReload','parameters':\{'context':'context'\}\},\{'id':'tchart2','action':'addEventOnChart','parameters':\{'context':'context'\}\}]\}\}">
+										<sap.ui.iot.controls:measuredValues>
+											<sap.ui.iot.elements:IoTMeasuredValuesListElement xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="element3" itemPress="press"/>
+										</sap.ui.iot.controls:measuredValues>
+									</sap.ui.iot.controls:IoTMeasuredValues>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter text="Chart" icon="sap-icon://area-chart" id="filter2" iconColor="Positive">
+								<content>
+									<sap.ui.iot.controls:IoTChart xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.iot.controls="sap.ui.iot.controls" xmlns:sap.ui.iot.elements="sap.ui.iot.elements" id="tchart2" noOfHours="1" headerTitle="{ThingName}" subheaderTitle="" assetId="" rememberMeasuredValues="true" showCalculatedValues="true" onEventsPress="Perr" modelContextChange="Verr">
+										<sap.ui.iot.controls:events>
+											<sap.ui.iot.elements:IoTEventsOnChartElement businessTimeStamp="" severity="0" eventId="" eventDescription="" eventProperty="" eventStatus="" id="element2"/>
+										</sap.ui.iot.controls:events>
+									</sap.ui.iot.controls:IoTChart>
+								</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

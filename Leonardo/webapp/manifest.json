@@ -1,0 +1,203 @@
+{
+	"_version": "1.3.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "Leonardo",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"EventService": {
+				"uri": "/IOTAS-COMPOSITE-EVENTS-ODATA/CompositeEvents/EventType/v1/com.sap.appiot.eventtypes:StandardEventType",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/EventsMetadata/metadata.xml"
+				}
+			},
+			"mainService": {
+				"uri": "/IOTAS-ADVANCEDLIST-THING-ODATA/CompositeThings/v1/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"Thing_Service1": {
+				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/iotaevce.leoprd.sap.impellermotors:M_Impeller_Motors",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/Thing_Metadata1/metadata.xml"
+				}
+			},
+			"Thing_Service2": {
+				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/iotaevce.leoprd.sap.othermotors:M_Other_Motors",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/Thing_Metadata2/metadata.xml"
+				}
+			},
+			"Thing_Service3": {
+				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/iotaevce.leoprd.sap.screwmotors:M_Screw_Motors",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/Thing_Metadata3/metadata.xml"
+				}
+			}
+		},
+		"title": "{{appTitle}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "ui.appbuilder.iotappmtatemplatelayout",
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "Leonardo.view.Main",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ui.vbm": {},
+				"sap.ui.iot": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "Leonardo.i18n.i18n"
+				}
+			},
+			"events": {
+				"dataSource": "EventService",
+				"preload": true,
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline"
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline",
+					"headers": {
+						"sap-iot-eventtype": "com.sap.appiot.eventtypes:StandardEventType",
+						"sap-iot-pst": "pdms.eu10.com.sap.asset.core:HeaderPST,pdms.eu10.com.sap.asset.core:Image,pdms.eu10.com.sap.asset.core:MachineAlarmPST"
+					}
+				}
+			},
+			"thingModel1": {
+				"dataSource": "Thing_Service1",
+				"preload": true,
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline"
+				}
+			},
+			"thingModel2": {
+				"dataSource": "Thing_Service2",
+				"preload": true,
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline"
+				}
+			},
+			"thingModel3": {
+				"dataSource": "Thing_Service3",
+				"preload": true,
+				"settings": {
+					"useBatch": false,
+					"defaultCountMode": "Inline"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "Leonardo.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl"
+			},
+			"routes": [
+				{
+					"name": "RootView",
+					"pattern": "",
+					"target": [
+						"Main"
+					]
+				},
+				{
+					"name": "selected_data_info",
+					"pattern": "_view",
+					"target": [
+						"selected_data_info"
+					]
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewType": "XML",
+					"viewName": "Main"
+				},
+				"selected_data_info": {
+					"viewType": "XML",
+					"viewName": "selected_data_info"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

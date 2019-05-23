@@ -1,0 +1,394 @@
+<?xml version="1.0" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+		xmlns:sap="http://www.sap.com/Protocols/SAPData">
+		<Schema Namespace="com.sap.appiot" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_Vibration_V_XZ0.I_Velocity_X" Type="Edm.Double"></Property>
+				<Property Name="IG_Vibration_V_XZ0.I_Velocity_X.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_Vibration_V_XZ0.I_Velocity_Z" Type="Edm.Double"></Property>
+				<Property Name="IG_Vibration_V_XZ0.I_Velocity_Z.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_MLSCORE0.I_Normalized_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_MLSCORE0.I_Normalized_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MLSCORE0.I_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_MLSCORE0.I_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_IQR0.I_Normalized_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_IQR0.I_Normalized_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_IQR0.I_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_IQR0.I_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_Current0.I_Ampere" Type="Edm.Double"></Property>
+				<Property Name="IG_Current0.I_Ampere.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_Vibration_F_XZ0.I_Freq_X" Type="Edm.Double"></Property>
+				<Property Name="IG_Vibration_F_XZ0.I_Freq_X.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_Vibration_F_XZ0.I_Freq_Z" Type="Edm.Double"></Property>
+				<Property Name="IG_Vibration_F_XZ0.I_Freq_Z.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="HeaderPST.batchNumber" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.batchNumber.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.description" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.description.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.lifecycle" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.lifecycle.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.manufacturer" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.manufacturer.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.name" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.name.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.operatorID" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.operatorID.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.operatorName" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.operatorName.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.serialNumber" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.serialNumber.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="HeaderPST.sourceBProle" Type="Edm.String"></Property>
+				<Property Name="HeaderPST.sourceBProle.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="MachineAlarmPST.machineAlarms" Type="Edm.String"></Property>
+				<Property Name="MachineAlarmPST.machineAlarms.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_MAR0.I_Normalized_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_Normalized_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_1" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_1.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_10" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_10.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_11" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_11.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_12" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_12.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_13" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_13.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_14" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_14.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_15" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_15.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_2" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_2.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_3" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_3.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_4" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_4.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_5" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_5.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_6" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_6.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_7" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_7.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_8" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_8.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_9" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_9.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_CUR" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_CUR.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_SCORE_VIB" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_SCORE_VIB.Timestamp" Type="Edm.DateTimeOffset"></Property>
+				<Property Name="IG_MAR0.I_Score" Type="Edm.Double"></Property>
+				<Property Name="IG_MAR0.I_Score.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="Thing">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing unique ID</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingISOCode" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Language code</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing description</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingName" Type="Edm.String" Nullable="false">
+					<Documentation>
+						<LongDescription>Thing name</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingExternalId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing external id</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingType" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing Type ID associated with the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ObjectGroup" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Object group used to create the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPName" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner name associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPLandlinePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Landline phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="BPMobilePhoneNumber" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Mobile phone number of Business partner</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCustomerId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Business partner ID associated for the Thing</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingRegionDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Region where Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryDescription" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCountryId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Country code where the Thing is located</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingCommunicationData" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing address details</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="ThingLocationId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing location ID</LongDescription>
+					</Documentation>
+				</Property>
+				<Property Name="AlternateId" Type="Edm.String">
+					<Documentation>
+						<LongDescription>Thing AlternateId</LongDescription>
+					</Documentation>
+				</Property>
+				<NavigationProperty Name="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST"
+					Relationship="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST" FromRole="ThingEntities"
+					ToRole="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPSTEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_CelsiusEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCOREEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAREntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_CurrentEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR"
+					Relationship="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR" FromRole="ThingEntities"
+					ToRole="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQREntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST"
+					Relationship="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST" FromRole="ThingEntities"
+					ToRole="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPSTEntities"></NavigationProperty>
+				<NavigationProperty Name="DYN_ENT_pdms_eu10_com_sap_asset_core__Image"
+					Relationship="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__Image" FromRole="ThingEntities"
+					ToRole="DYN_ENT_pdms_eu10_com_sap_asset_core__ImageEntities"></NavigationProperty>
+			</EntityType>
+			<EntityType Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius" sap:semantics="timeseries">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="IG_Temp_Celsius0.I_Celsius" Type="Edm.Double"></Property>
+				<Property Name="IG_Temp_Celsius0.I_Celsius.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<EntityType Name="DYN_ENT_pdms_eu10_com_sap_asset_core__Image">
+				<Key>
+					<PropertyRef Name="ThingId"></PropertyRef>
+				</Key>
+				<Property Name="ThingId" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Image.ImageName" Type="Edm.String"></Property>
+				<Property Name="Image.ImageName.Timestamp" Type="Edm.DateTimeOffset"></Property>
+			</EntityType>
+			<Association Name="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST" Multiplicity="1"
+					Role="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPSTEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_CelsiusEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCOREEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAREntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_CurrentEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR" Multiplicity="1"
+					Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQREntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST" Multiplicity="1"
+					Role="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPSTEntities"></End>
+			</Association>
+			<Association Name="DYN_ENT_pdms_eu10_com_sap_asset_core__Image">
+				<End Type="com.sap.appiot.Thing" Multiplicity="1" Role="ThingEntities"></End>
+				<End Type="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__Image" Multiplicity="1"
+					Role="DYN_ENT_pdms_eu10_com_sap_asset_core__ImageEntities"></End>
+			</Association>
+			<EntityContainer Name="CompositeThingsThingType" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZs"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCOREs"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQRs"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Currents"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZs"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ"></EntitySet>
+				<EntitySet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPSTs"
+					EntityType="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST"></EntitySet>
+				<EntitySet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPSTs"
+					EntityType="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MARs"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR"></EntitySet>
+				<EntitySet Name="Things" EntityType="com.sap.appiot.Thing"></EntitySet>
+				<EntitySet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsiuss"
+					EntityType="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius"></EntitySet>
+				<EntitySet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__Images" EntityType="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__Image"></EntitySet>
+				<AssociationSet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST"
+					Association="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPST">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPSTs" Role="DYN_ENT_pdms_eu10_com_sap_asset_core__HeaderPSTEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsius">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_Celsiuss"
+						Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Temp_CelsiusEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCORE">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCOREs"
+						Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MLSCOREEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZ">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZs"
+						Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_V_XZEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAR">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MARs" Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_MAREntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Current">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Currents"
+						Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_CurrentEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZ">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZs"
+						Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_Vibration_F_XZEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR"
+					Association="com.sap.appiot.DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQR">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQRs" Role="DYN_ENT_iotaevce_leoprd_sap_impellermotors__IG_IQREntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST"
+					Association="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPST">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPSTs" Role="DYN_ENT_pdms_eu10_com_sap_asset_core__MachineAlarmPSTEntities"></End>
+				</AssociationSet>
+				<AssociationSet Name="DYN_ENT_pdms_eu10_com_sap_asset_core__Image" Association="com.sap.appiot.DYN_ENT_pdms_eu10_com_sap_asset_core__Image">
+					<End EntitySet="Things" Role="ThingEntities"></End>
+					<End EntitySet="DYN_ENT_pdms_eu10_com_sap_asset_core__Images" Role="DYN_ENT_pdms_eu10_com_sap_asset_core__ImageEntities"></End>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
